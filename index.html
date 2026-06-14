@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Binary Boss - AI Trading Community</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 
     <script>
     !function(f,b,e,v,n,t,s)
@@ -26,99 +26,179 @@
     /></noscript>
     <style>
         :root {
-            --bg-page: #080a10; /* Gunmetal deep blue */
-            --bg-block: #12151d; /* Slightly lighter block */
-            --accent-blue: #009bff; /* Electric Blue */
-            --accent-glow: #70b9ff;
-            --text-main: #ffffff;
-            --text-muted: #8b95a5;
+            --bg-main: #f3f5fc; /* Fresh engaging bright background */
+            --bg-block: #ffffff; /* Clean white card blocks */
+            --accent-purple: #6200ea; /* High attention vivid purple */
+            --accent-neon: #00e676; /* Profit Green */
+            --text-dark: #0f172a;
+            --text-muted: #64748b;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Outfit', sans-serif; }
         
-        body { background-color: var(--bg-page); color: var(--text-main); line-height: 1.6; padding-bottom: 20px; overflow-x: hidden;}
+        body { 
+            background-color: var(--bg-main); 
+            color: var(--text-dark); 
+            line-height: 1.6; 
+            padding-bottom: 30px; 
+            overflow-x: hidden;
+            /* High Energy Subtle Gradient Background Pattern */
+            background-image: radial-gradient(circle at 100% 0%, rgba(98, 0, 234, 0.08) 0%, transparent 40%),
+                              radial-gradient(circle at 0% 100%, rgba(0, 230, 118, 0.08) 0%, transparent 40%);
+        }
 
-        /* Modern Block Container */
         .page-container { max-width: 480px; width: 100%; margin: 0 auto; display: flex; flex-direction: column; }
 
-        /* header */
-        header { background: rgba(8, 10, 16, 0.9); backdrop-filter: blur(5px); padding: 15px; border-bottom: 1px solid rgba(255,255,255,0.03); display: flex; justify-content: center; }
-        .logo-text { font-family: 'Roboto Mono', monospace; font-size: 14px; color: var(--accent-blue); text-transform: uppercase; letter-spacing: 2px; font-weight: 500;}
+        header { padding: 15px; text-align: center; background: transparent; }
+        .logo-text { font-family: 'Space Grotesk', sans-serif; font-size: 13px; color: var(--accent-purple); text-transform: uppercase; letter-spacing: 3px; font-weight: 700; }
 
-        /* --- 1. HERO SECTION (Layout Reset par User Demand) --- */
-        .hero-block { background-color: var(--bg-block); padding: 30px 20px 20px 20px; border-bottom: 1px solid rgba(255,255,255,0.02); display: flex; flex-direction: column; align-items: center; text-align: center;}
+        /* --- HERO SECTION (Image -> Button -> Scroll Link Reset) --- */
+        .hero-block { 
+            background-color: var(--bg-block); 
+            padding: 35px 24px; 
+            border-radius: 0 0 32px 32px;
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(98, 0, 234, 0.04);
+        }
 
-        /* Top Profile Image */
+        /* Perfectly Centered Top Profile Circle */
         .profile-img { 
-            width: 140px; height: 140px; border-radius: 50%; object-fit: cover; margin-bottom: 25px; 
-            border: 3px solid var(--accent-blue);
-            box-shadow: 0 0 25px rgba(0, 155, 255, 0.25);
-            animation: slow-pulse 3s infinite ease-in-out;
+            width: 135px; 
+            height: 135px; 
+            border-radius: 50%; 
+            object-fit: cover; 
+            margin-bottom: 25px; 
+            border: 4px solid var(--bg-block);
+            box-shadow: 0 0 0 3px var(--accent-purple), 0 10px 25px rgba(98, 0, 234, 0.2);
         }
 
-        @keyframes slow-pulse {
-            0% { box-shadow: 0 0 20px rgba(0, 155, 255, 0.2); transform: scale(1); }
-            50% { box-shadow: 0 0 35px rgba(0, 155, 255, 0.4); transform: scale(1.02); }
-            100% { box-shadow: 0 0 20px rgba(0, 155, 255, 0.2); transform: scale(1); }
-        }
-
-        /* 🚀 ULTIMATE BUTTON (Top Image ke Just Nichey) */
+        /* 🚀 THE ULTIMATE BUTTON (Top Image Ke Just Nichey) */
         .btn-premium { 
-            display: flex; align-items: center; justify-content: center; width: 100%; padding: 18px; 
-            border-radius: 14px; font-size: 18px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px;
-            text-decoration: none; border: none; cursor: pointer; transition: 0.3s; 
-            background: linear-gradient(135deg, #00b8ff, #009bff); color: #000; 
-            box-shadow: 0 8px 25px rgba(0, 155, 255, 0.4), inset 0 2px 0 rgba(255,255,255,0.3); 
-            margin-bottom: 12px; position: relative; overflow: hidden;
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            width: 100%; 
+            padding: 18px; 
+            border-radius: 16px; 
+            font-size: 18px; 
+            font-weight: 800; 
+            text-transform: uppercase; 
+            letter-spacing: 0.5px;
+            text-decoration: none; 
+            border: none; 
+            cursor: pointer; 
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+            background: linear-gradient(135deg, #7c4dff, var(--accent-purple)); 
+            color: #ffffff; 
+            box-shadow: 0 8px 25px rgba(98, 0, 234, 0.35); 
+            margin-bottom: 15px; 
+            position: relative;
         }
         
         .btn-premium:hover { 
-            transform: translateY(-3px) scale(1.02); 
-            box-shadow: 0 12px 35px rgba(0, 155, 255, 0.6); 
+            transform: translateY(-4px) scale(1.02); 
+            box-shadow: 0 14px 30px rgba(98, 0, 234, 0.5); 
         }
 
         /* Scroll Hint Text */
-        .scroll-hint { font-size: 13px; color: var(--text-muted); font-weight: 500; opacity: 0.8; letter-spacing: 0.5px;}
+        .scroll-hint { 
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 13px; 
+            color: var(--accent-purple); 
+            font-weight: 700; 
+            letter-spacing: 1px;
+            animation: bounce 2s infinite;
+        }
 
-        /* --- 2. MAIN CONTENT (H1 aur Details) --- */
-        .content-block { padding: 30px 20px; text-align: center;}
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-6px); }
+            60% { transform: translateY(-3px); }
+        }
 
-        .badge { background: rgba(0, 155, 255, 0.1); color: var(--accent-blue); padding: 5px 16px; border-radius: 20px; font-size: 11px; font-weight: 700; display: inline-block; margin-bottom: 15px; border: 1px solid rgba(0, 155, 255, 0.2); text-transform: uppercase; letter-spacing: 1.5px; }
+        /* --- CONTENT SECTION --- */
+        .content-block { padding: 30px 24px; text-align: center; }
 
-        /* Typography - Niche Accurate */
-        h1 { font-size: 28px; font-weight: 900; line-height: 1.3; margin-bottom: 12px; }
-        h1 span { color: var(--accent-blue); text-shadow: 0 0 10px rgba(0, 155, 255, 0.2); }
+        .badge { 
+            background: rgba(0, 230, 118, 0.12); 
+            color: #00c853; 
+            padding: 6px 16px; 
+            border-radius: 50px; 
+            font-size: 11px; 
+            font-weight: 700; 
+            display: inline-block; 
+            margin-bottom: 15px; 
+            text-transform: uppercase; 
+            letter-spacing: 1.5px; 
+        }
+
+        h1 { font-size: 28px; font-weight: 900; line-height: 1.25; margin-bottom: 12px; color: var(--text-dark); }
+        h1 span { color: var(--accent-purple); }
         .subtext { font-size: 15px; color: var(--text-muted); margin-bottom: 25px; line-height: 1.6; }
 
-        /* Modern Feature List */
-        .feature-box { width: 100%; text-align: left; background: #1a1e29; border-radius: 12px; padding: 20px; border: 1px solid rgba(255,255,255,0.03); }
-        .feature-item { display: flex; align-items: center; margin-bottom: 12px; font-size: 14px; font-weight: 500; }
+        /* Modern Bullet Points Box */
+        .feature-box { 
+            width: 100%; 
+            text-align: left; 
+            background: var(--bg-block); 
+            border-radius: 20px; 
+            padding: 22px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+            border: 1px solid rgba(0,0,0,0.01);
+        }
+        .feature-item { display: flex; align-items: center; margin-bottom: 14px; font-size: 14.5px; color: var(--text-dark); font-weight: 600; }
         .feature-item:last-child { margin-bottom: 0; }
-        .icon { font-size: 18px; margin-right: 12px; }
-        .highlight-text { color: #fff; font-weight: 600; }
+        .icon { font-size: 20px; margin-right: 12px; background: rgba(98, 0, 234, 0.06); padding: 6px; border-radius: 8px; display: flex; align-items: center; justify-content: center;}
 
-        /* --- 3. TESTIMONIALS SLIDER SECTION (New Designing) --- */
-        .testimonials-block { padding: 30px 0; border-top: 1px solid rgba(255,255,255,0.02); }
+        /* --- 📊 9:16 TESTIMONIALS SLIDER (FULL IMAGE VISIBILITY) --- */
+        .testimonials-block { padding: 25px 0 10px 0; }
 
-        .slider-header { text-align: center; margin-bottom: 20px; padding: 0 20px;}
-        .slider-header h2 { font-size: 18px; font-weight: 800; text-transform: uppercase; color: #fff; letter-spacing: 1px; }
+        .slider-header { text-align: center; margin-bottom: 20px; padding: 0 24px; }
+        .slider-header h2 { font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 700; text-transform: uppercase; color: var(--text-dark); letter-spacing: 0.5px; }
+        .slider-header h2 span { color: var(--accent-purple); }
 
-        /* Smooth Horizontal Slider (Pure CSS, Mobile Native feel) */
-        .slider-container { width: 100%; display: flex; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; padding-bottom: 10px; padding-left: 20px; }
-        .slider-container::-webkit-scrollbar { display: none; } /* Hides scrollbar */
+        /* Native App Swiping Layout */
+        .slider-container { 
+            width: 100%; 
+            display: flex; 
+            overflow-x: auto; 
+            overflow-y: hidden; 
+            scroll-snap-type: x mandatory; 
+            padding: 10px 24px 20px 24px;
+            gap: 16px;
+        }
+        .slider-container::-webkit-scrollbar { display: none; } /* Scrollbar hidden for super clean view */
 
-        .slide { flex: 0 0 75%; /* Visible width of each slide */ aspect-ratio: 16/9; margin-right: 15px; scroll-snap-align: center; position: relative; border-radius: 10px; overflow: hidden; }
+        /* Strict 9:16 Ratio Container for Perfect Display */
+        .slide { 
+            flex: 0 0 260px; /* Perfect smartphone display width */ 
+            aspect-ratio: 9 / 16; 
+            scroll-snap-align: center; 
+            border-radius: 18px; 
+            overflow: hidden; 
+            box-shadow: 0 12px 30px rgba(98, 0, 234, 0.12);
+            background-color: var(--bg-block);
+            border: 1px solid rgba(0,0,0,0.03);
+        }
         
-        .slide img { width: 100%; height: 100%; object-fit: cover; border: 1px solid rgba(255,255,255,0.05);}
+        /* Object-contain fixes the full view aspect ratio clipping bug */
+        .slide img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: contain; 
+            display: block;
+        }
 
-        /* slider pagination dots (Static examples, need JS for dynamic) */
-        .slider-dots { display: flex; justify-content: center; gap: 8px; margin-top: 10px; }
-        .dot { width: 8px; height: 8px; background: rgba(255,255,255,0.1); border-radius: 50%; }
-        .dot.active { background: var(--accent-blue); box-shadow: 0 0 5px var(--accent-blue); }
+        .slider-dots { display: flex; justify-content: center; gap: 8px; margin-top: 5px; }
+        .dot { width: 7px; height: 7px; background: rgba(98, 0, 234, 0.15); border-radius: 50%; }
+        .dot.active { width: 18px; border-radius: 10px; background: var(--accent-purple); }
 
-        /* --- 4. FOOTER --- */
-        .footer-block { padding: 30px 20px; margin-top: 10px; background-color: #0c0f16; border-top: 1px solid rgba(255,255,255,0.02); }
-        .disclaimer { font-size: 10px; color: #505d6e; text-align: justify; line-height: 1.6; }
+        /* --- FOOTER --- */
+        .footer-block { padding: 35px 24px; background-color: var(--bg-block); border-top: 1px solid rgba(0,0,0,0.02); margin-top: 25px; }
+        .disclaimer { font-size: 10.5px; color: var(--text-muted); text-align: justify; line-height: 1.6; }
     </style>
 </head>
 <body>
@@ -126,7 +206,7 @@
     <div class="page-container">
         
         <header>
-            <div class="logo-text">System Active v2.0</div>
+            <div class="logo-text">AI Verification Engine</div>
         </header>
 
         <section class="hero-block">
@@ -136,52 +216,52 @@
                 🚀 Join Telegram Community
             </a>
 
-            <p class="scroll-hint">⬇️ Scroll For Feedbacks</p>
+            <p class="scroll-hint">慢 Scroll For Feedbacks</p>
         </section>
 
         <section class="content-block">
-            <div class="badge">AI Binary Intelligence</div>
+            <div class="badge">Verified AI Accuracy</div>
 
-            <h1>Master The Market With<br><span>Binary Bots</span></h1>
+            <h1>Vibrant Binary Signals Via<br><span>AI Trading Bots</span></h1>
             
-            <p class="subtext">Watch our AI algorithm analyze live structure and execute data-driven binary signals in real-time.</p>
+            <p class="subtext">Watch our custom artificial intelligence algorithm analyze live chart trends and deliver high-precision binary trading signals in real-time.</p>
 
             <div class="feature-box">
                 <div class="feature-item">
+                    <span class="icon">🤖</span>
+                    <span>Live <span style="color: var(--accent-purple);">AI Bot Executions</span> & System Logic</span>
+                </div>
+                <div class="feature-item">
                     <span class="icon">📈</span>
-                    <span>See <span class="highlight-text">Live Binary Executions</span> & Logic</span>
+                    <span>High-Accuracy <span style="color: var(--accent-purple);">Binary Signals</span> Daily</span>
                 </div>
                 <div class="feature-item">
-                    <span class="icon">📊</span>
-                    <span>Learn <span class="highlight-text">Algorithm Chart Structure</span></span>
-                </div>
-                <div class="feature-item">
-                    <span class="icon">🎯</span>
-                    <span>Exclusive <span class="highlight-text">Educational Signals & setups</span></span>
+                    <span class="icon">✨</span>
+                    <span>100% Free <span style="color: var(--accent-purple);">Community Onboarding</span> Access</span>
                 </div>
             </div>
         </section>
 
         <section class="testimonials-block">
             <div class="slider-header">
-                <h2>Verified Community Feedbacks</h2>
+                <h2>📊 Live Community <span>Feedbacks</span></h2>
             </div>
             
             <div class="slider-container">
                 <div class="slide">
-                    <img src="https://www.image2url.com/r2/default/images/1781455960768-5e353f2d-5a24-4a7a-a046-f3bfb828a5ab.jpg" alt="Feedback 1">
+                    <img src="https://www.image2url.com/r2/default/images/1781455960768-5e353f2d-5a24-4a7a-a046-f3bfb828a5ab.jpg" alt="Binary Profit Proof 1">
                 </div>
                 <div class="slide">
-                    <img src="https://www.image2url.com/r2/default/images/1781456002366-03093812-ed93-4df4-8ed0-2eb4b3edba39.jpg" alt="Feedback 2">
+                    <img src="https://www.image2url.com/r2/default/images/1781456002366-03093812-ed93-4df4-8ed0-2eb4b3edba39.jpg" alt="Binary Profit Proof 2">
                 </div>
                 <div class="slide">
-                    <img src="https://www.image2url.com/r2/default/images/1781456066933-d345949c-2f1b-49f9-b0da-e938c55591dc.jpg" alt="Feedback 3">
+                    <img src="https://www.image2url.com/r2/default/images/1781456066933-d345949c-2f1b-49f9-b0da-e938c55591dc.jpg" alt="Binary Profit Proof 3">
                 </div>
                 <div class="slide">
-                    <img src="https://www.image2url.com/r2/default/images/1781456198936-90abef17-880f-40ce-b12a-bfad9334ce24.jpg" alt="Feedback 4">
+                    <img src="https://www.image2url.com/r2/default/images/1781456198936-90abef17-880f-40ce-b12a-bfad9334ce24.jpg" alt="Binary Profit Proof 4">
                 </div>
                 <div class="slide">
-                    <img src="https://www.image2url.com/r2/default/images/1781456264960-1ee1459b-f6a4-4211-83b3-13804c9cb218.jpg" alt="Feedback 5">
+                    <img src="https://www.image2url.com/r2/default/images/1781456264960-1ee1459b-f6a4-4211-83b3-13804c9cb218.jpg" alt="Binary Profit Proof 5">
                 </div>
             </div>
 
@@ -197,34 +277,32 @@
         <footer class="footer-block">
             <div class="disclaimer">
                 This site is not a part of the Facebook™ website or Facebook™ Inc. FACEBOOK™ is a trademark of FACEBOOK™, Inc. <br><br>
-                <strong>Important:</strong> All information provided is strictly for <strong>educational purposes only</strong>. Trading involves risk, and past performance does not guarantee future results.
+                <strong>Important Notice:</strong> All analytical data, binary demonstrations, and signal strategies shared inside the group are strictly for <strong>educational and research purposes only</strong>. Trading involves real market risk. Past wins never guarantee future performance.
             </div>
         </footer>
     </div>
 
     <script>
-        // --- 100% FAIL-PROOF PIXEL TRACKING & REDIRECTION LOGIC ---
+        // --- 🎯 DASHBOARD EXACT ADVANCED TRACKING & DELAY REDIRECT ---
         function fireVolumeLead(event) {
-            event.preventDefault(); // Stop instant redirect to let pixel fire
+            event.preventDefault(); // Holds redirect securely
             
-            const targetUrl = event.currentTarget.href; // Pulls the link from href safely
+            const targetUrl = event.currentTarget.href; 
 
             try {
-                // Check if Meta Pixel is loaded and functional
                 if (typeof fbq !== 'undefined') {
-                    // Send exact 'Lead' conversion data to Meta
+                    // Sends exact match parameters directly to Meta Events Manager Dashboard
                     fbq('track', 'Lead', {
                         content_name: 'Telegram_Join_Request',
-                        content_category: 'Binary_Bot_Community'
+                        content_category: 'Binary_AI_Signals_Funnel'
                     });
-                    console.log("✅ Custom 'Telegram_Join_Request' Lead Fired!");
+                    console.log("✅ Advanced 'Telegram_Join_Request' Lead Fired!");
                 }
             } catch (error) {
-                // Background tracking code failsafe
-                console.log("⚠️ Pixel blocked or failed, bypassing to redirect:", error);
+                console.log("⚠️ Pixel tracking bypassed safely:", error);
             }
             
-            // Redirect smoothly
+            // Safe 400ms delay to let pixel trigger data packets
             setTimeout(() => {
                 window.location.href = targetUrl;
             }, 400);

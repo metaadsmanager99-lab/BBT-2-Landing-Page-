@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Boss - AI Trading Intelligence</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    
+    // NAYA PIXEL ID
+    fbq('init', '970801855798793');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=970801855798793&ev=PageView&noscript=1"
+    /></noscript>
+    <style>
+        :root {
+            /* TUMHARI DI HUI EXACT COLOR SCHEME */
+            --bg-deep: #07090f;
+            --card-bg: #11141e;
+            --accent-gold: #ffaa00;
+            --accent-glow: #ffea00;
+            --text-main: #ffffff;
+            --text-dim: #8b95a5;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            background-color: var(--bg-deep); 
+            color: var(--text-main); 
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+            min-height: 100vh; 
+            padding: 20px 15px;
+            overflow-x: hidden;
+            font-family: 'Outfit', sans-serif;
+            /* Cyber Grid Background */
+            background-image: linear-gradient(rgba(255, 170, 0, 0.03) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(255, 170, 0, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        /* The AI Tech Panel */
+        .tech-panel { 
+            max-width: 450px; 
+            width: 100%; 
+            background: linear-gradient(180deg, var(--card-bg) 0%, rgba(7, 9, 15, 0.95) 100%);
+            border: 1px solid rgba(255, 170, 0, 0.15);
+            padding: 35px 25px; 
+            border-radius: 20px;
+            text-align: center; 
+            box-shadow: 0 15px 40px rgba(0,0,0,0.9), inset 0 2px 20px rgba(255, 170, 0, 0.03);
+            position: relative;
+        }
+
+        /* 🤖 1. AI SCANNER IMAGE SECTION */
+        .ai-scanner {
+            position: relative;
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 25px auto;
+            border-radius: 24px; /* Squircle Shape */
+            border: 2px solid var(--accent-gold);
+            overflow: hidden;
+            box-shadow: 0 0 25px rgba(255, 170, 0, 0.2);
+            transform: rotate(45deg); /* Diamond shape logic */
+        }
+        
+        .ai-scanner img {
+            width: 150%;
+            height: 150%;
+            object-fit: cover;
+            transform: rotate(-45deg) translate(-15%, -15%); /* Reverse diamond for straight image */
+        }
+
+        /* Laser Scan Line Animation */
+        .laser-line {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 3px;
+            background: var(--accent-glow);
+            box-shadow: 0 0 15px 3px var(--accent-glow);
+            animation: scan-laser 2s ease-in-out infinite alternate;
+            transform: rotate(-45deg) scale(1.5);
+            z-index: 5;
+        }
+
+        @keyframes scan-laser {
+            0% { top: -20%; }
+            100% { top: 120%; }
+        }
+
+        /* Tag / Badge */
+        .cyber-badge {
+            display: inline-block;
+            background: rgba(255, 170, 0, 0.1);
+            color: var(--accent-gold);
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 3px;
+            padding: 6px 15px;
+            border: 1px solid rgba(255, 170, 0, 0.3);
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        /* Typography */
+        h1 { 
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 32px; 
+            font-weight: 700; 
+            line-height: 1.1; 
+            margin-bottom: 12px; 
+            text-transform: uppercase;
+        }
+        h1 span { color: var(--accent-glow); text-shadow: 0 0 15px rgba(255, 234, 0, 0.4); }
+        .subtext { font-size: 15px; color: var(--text-dim); margin-bottom: 30px; line-height: 1.6; }
+
+        /* Future Feature Pills */
+        .feature-pills {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        .pill {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 6px 12px;
+            border-radius: 50px;
+            font-size: 12px;
+            color: #ddd;
+            display: flex;
+            align-items: center;
+        }
+        .pill::before {
+            content: ''; display: inline-block; width: 6px; height: 6px; 
+            background: var(--accent-gold); border-radius: 50%; margin-right: 6px;
+            box-shadow: 0 0 5px var(--accent-gold);
+        }
+
+        /* 🚀 The Terminal Button */
+        .btn-terminal { 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            width: 100%; 
+            padding: 20px; 
+            border-radius: 8px; 
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 20px; 
+            font-weight: 700; 
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            text-decoration: none; 
+            background: var(--accent-gold); 
+            color: #000; 
+            box-shadow: 0 0 20px rgba(255, 170, 0, 0.3);
+            transition: all 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-terminal:hover { 
+            background: var(--accent-glow);
+            box-shadow: 0 0 35px rgba(255, 234, 0, 0.5);
+            transform: scale(1.02);
+        }
+
+        /* Disclaimer */
+        .disclaimer { font-size: 10px; color: #4a5568; text-align: justify; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 25px; line-height: 1.5; }
+    </style>
+</head>
+<body>
+
+    <div class="tech-panel">
+        
+        <div class="ai-scanner">
+            <div class="laser-line"></div>
+            <img src="https://www.image2url.com/r2/default/images/1780770070002-8a2c2dfa-8e34-4238-9faf-7c624896e2bf.jpg" alt="Binary Boss AI">
+        </div>
+
+        <div class="cyber-badge">🤖 SYSTEM ACTIVE</div>
+
+        <h1>Auto-Execute<br><span>AI Setups</span></h1>
+        
+        <p class="subtext">Connect directly to our algorithmic trading community. Watch the AI decode market structures and deliver live chart setups.</p>
+
+        <div class="feature-pills">
+            <div class="pill">Real-Time Data</div>
+            <div class="pill">Algorithmic Setups</div>
+            <div class="pill">100% Free Access</div>
+        </div>
+
+        <a href="https://t.me/+XymmYD79AIVlMjQ1" onclick="trackExactLead(event)" class="btn-terminal">
+            ⚡ INITIALIZE BOT ACCESS
+        </a>
+
+        <div class="disclaimer">
+            This site is not a part of the Facebook™ website or Facebook™ Inc. FACEBOOK™ is a trademark of FACEBOOK™, Inc. All AI bot demonstrations and chart analysis provided are strictly for educational purposes only.
+        </div>
+    </div>
+
+    <script>
+        // --- 🎯 ADVANCED DASHBOARD EXACT TRACKING LOGIC ---
+        function trackExactLead(event) {
+            event.preventDefault(); 
+            const targetTelegramUrl = event.currentTarget.href; 
+
+            try {
+                if (typeof fbq !== 'undefined') {
+                    // Exact 'Telegram_Join_Request' track hoga tumhare dashboard pe
+                    fbq('track', 'Lead', {
+                        content_name: 'Telegram_Join_Request',
+                        content_category: 'AI_Trading_Bot'
+                    });
+                    console.log("✅ Exact 'Join Request' Lead Tracked on Dashboard!");
+                }
+            } catch (error) {
+                console.log("⚠️ Tracking block detected:", error);
+            }
+            
+            // Seamless 400ms redirect
+            setTimeout(() => {
+                window.location.href = targetTelegramUrl;
+            }, 400);
+        }
+    </script>
+</body>
+</html>
